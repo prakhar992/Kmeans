@@ -10,7 +10,7 @@ model = pickle.load(open('kmeanscluster.pkl','rb'))
 @app.route('/')
 def home():
   
-    return render_template("untitled.html")
+    return render_template("index.html")
   
 @app.route('/predict',methods=['GET'])
 def predict():
@@ -36,7 +36,7 @@ def predict():
     result="Custmor is sensible"
     
         
-  return render_template('untitled.html', prediction_text='Model  has predicted  : {}'.format(result))
+  return render_template('index.html', prediction_text='Model  has predicted  : {}'.format(result))
 
 if __name__ == '__main__':
  app.run()
